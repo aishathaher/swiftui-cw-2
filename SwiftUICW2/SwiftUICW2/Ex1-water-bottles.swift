@@ -25,11 +25,11 @@ struct Exercise1: View {
               
                     
                         VStack {
-                            Text("Hello, \(name)!")
                             TextField("Type your name here", text: $name)
                             
-                            Stepper("Age: \(age)",  value: $age, in: 1...122)
+                            Stepper("كم بطلا من الماء ستشرب؟:",  value: $age, in: 1...122)
                                 .padding()
+                            Text("اتعهد انا \(name)")
                             
                             
                         }
