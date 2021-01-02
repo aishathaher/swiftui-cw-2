@@ -32,6 +32,7 @@ struct Exercise1: View {
                             Text("اتعهد انا \(name)")
                             
                             
+                            
                         }
 //                        Stepper("كم بطلا من الماء تتعهد ان تشرب؟" ،value: "$WaterAmount")
                         
