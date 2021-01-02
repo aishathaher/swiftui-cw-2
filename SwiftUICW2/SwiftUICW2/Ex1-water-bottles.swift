@@ -6,7 +6,10 @@
 //  Copyright: Kuwait Codes 2020 code.kw
 import SwiftUI
 
+
 struct Exercise1: View {
+    @State var name = ""
+    @State var age = 0
     var body: some View {
         ZStack {
             Image("charter")
@@ -19,17 +22,28 @@ struct Exercise1: View {
                     .font(.largeTitle)
                     .fontWeight(.black)
                 
-//                ADD THE CODE HERE
-                
-                
-                Spacer()        
-            }.padding()
+              
+                    
+                        VStack {
+                            Text("Hello, \(name)!")
+                            TextField("Type your name here", text: $name)
+                            
+                            Stepper("Age: \(age)",  value: $age, in: 1...122)
+                                .padding()
+                            
+                            
+                        }
+//                        Stepper("كم بطلا من الماء تتعهد ان تشرب؟" ،value: "$WaterAmount")
+                        
+                        Spacer()
+                            .padding()
+                    }
+                }
+            }
         }
-    }
-}
-
-struct Exercise1_Previews: PreviewProvider {
-    static var previews: some View {
-        Exercise1()
-    }
-}
+        
+        struct Exercise1_Previews: PreviewProvider {
+            static var previews: some View {
+                Exercise1()
+            }
+        }
